@@ -1,5 +1,6 @@
 body {
-  font-family: helvetica;
+  font-family: helvetica neue;
+  background-image:url('/images/creampaper.png');
 }
 
 .container {
@@ -12,6 +13,35 @@ body {
 th {
     text-align: left;
   }
+
+.content {
+  border-bottom: 12px solid rgb(224, 224, 224);
+  padding-bottom: 15px;
+}
+
+.content ul {
+  padding-left: 0;
+}
+
+.content li {
+  font-size: 26px;
+}
+
+.content li a{
+  text-decoration: none;
+}
+
+.content li a:hover{
+  background: #cfcfcf;
+}
+
+.content li a:link{
+  color: rgb(0, 133, 255)
+}
+
+.content li a:visited{
+  color: #999;
+}
 
 .left {
     /*width: 30%;*/
@@ -124,7 +154,11 @@ header {
 }
 
 h1 {
-  color: #222;
+  color: #777;
+  border-bottom: 12px solid rgb(224, 224, 224);
+  padding-bottom: 15px;
+  font-size: 2.5em;
+  text-shadow: 1px 1px 2px #fff;
 }
 
 h2 {
@@ -140,7 +174,6 @@ h3 {
 
 
 p {
-  font-family: georgia, serif;
   color: #888;
   line-height: 26px;
   font-size: 18px;
@@ -154,8 +187,28 @@ blockquote {
 }
 
 .footer {
-  font-family: georgia, serif;
   color: #999;
   font-size: 12px;
   clear: both;
+  padding-top: 12px;
+}
+
+
+/*button*/
+
+.newpost {
+  background-color:#ededed;
+  border:6px solid #dcdcdc;
+  display:inline-block;
+  color:#777777;
+  font-family:arial;
+  font-size:16px;
+  font-weight:bold;
+  padding:6px 24px;
+  text-decoration:none;
+}
+
+.newpost:hover {
+  background-color:#828282;
+  color: #fff;
 }
