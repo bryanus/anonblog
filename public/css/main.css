@@ -1,41 +1,161 @@
+body {
+  font-family: helvetica;
+}
+
 .container {
     margin: 20px auto;
     width: 600px;
     padding: 0px 20px 20px 20px;
-    border: 1px dotted black;
+    /*border: 1px dotted black;*/
   }
 
 th {
     text-align: left;
   }
 
-
-body {
-  font-family: helvetica;
-}
-.container {
-  margin: 20px auto;
-  width: 600px;
-  padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
-}
-th {
-  text-align: left;
-}
-
 .left {
-    width: 30%;
+    /*width: 30%;*/
     float: left;
     text-align: right;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
 }
 .right {
-    width: 65%;
+    /*width: 65%;*/
     margin-left: 10px;
     text-align: right;
-    border: 1px solid #ccc;
+    /*border: 1px solid #ccc;*/
 }
 
 .success {
   vertical-align: middle;
+}
+
+form {
+  width: 600px;
+}
+
+.postlist ul {
+  list-style-type: none;
+}
+
+
+/*from pagination challenge*/
+
+.container {
+  /*
+    If you have a block-level element of a certain width, margin: 0 auto;
+    will how you center it inside its parent container.
+
+    See: http://bluerobot.com/web/css/center1.html
+    
+    Don't change the container width.
+  */
+  margin: 0 auto;  
+  width: 720px;
+}
+
+small.page_no {
+  float: right;
+  color: #ddd;
+}
+
+.pagination {
+  background-color: #eee;
+  margin: 10px 0px;
+  border: 1px solid #ccc;
+  float: left;
+  font-size: 12px;
+  clear: both;
+}
+
+.pagination a {
+  color: #222;
+  text-decoration: underline;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
+  float: left;
+}
+
+.pagination a.disabled {
+  color: #ccc;
+}
+
+.pagination a.active {
+  color: #666;
+  /*border: 1px solid orange;*/
+ /* padding-top: 5px;
+  padding-bottom: 5px;
+  padding-right: 10px;
+  padding-left: 10px;*/
+}
+
+/*overrides*/
+
+
+
+ol {
+  /*list-style:none;*/
+  display: inline;
+  padding-left: 0;
+}
+
+.pagination li {
+  display: inline;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: #eee;
+  float: left;
+  margin-left: -1px;
+
+}
+
+.pagination li a.active {
+  background: #666;
+  color: white;
+  text-decoration: none;
+}
+
+
+
+header {
+  border-bottom: 2px solid #efefef;
+}
+
+h1 {
+  color: #222;
+}
+
+h2 {
+  padding-top: 15px;
+  color: #222;
+}
+
+h3 {
+  font-family: georgia, serif;
+  padding-top: 15px;
+  color: #222;
+}
+
+
+p {
+  font-family: georgia, serif;
+  color: #888;
+  line-height: 26px;
+  font-size: 18px;
+}
+
+blockquote {
+  font-family: georgia, serif;
+  font-style: italic;
+  color: #888;
+  line-height: 26px;
+}
+
+.footer {
+  font-family: georgia, serif;
+  color: #999;
+  font-size: 12px;
+  clear: both;
 }

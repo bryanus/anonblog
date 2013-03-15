@@ -1,0 +1,26 @@
+ <div class="container">
+  <h1><%= @post.title %></h1>
+
+  <div class="content">
+    <p><%= @post.body %></p>
+  </div>
+
+  <a href="/posts">Back to Post Listing</a>
+
+  <div class="pagination">
+    <a href="page1.html" class="disabled">&lt;&lt; Previous</a>
+    <ol>
+      <li><a href="page1.html" class="active">1</a></li>
+      <li><a href="page2.html">2</a></li>
+      <li><a href="page3.html">3</a></li>
+      <li><a href="page4.html">4</a></li>
+      <li><a href="page5.html">5</a></li>
+    </ol>
+    <a href="page2.html">Next &gt;&gt;</a>
+  </div>
+
+  <div class="footer">
+    Copyright &copy; 2013 Bob Loblaw
+  </div>
+
+</div>

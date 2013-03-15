@@ -1,0 +1,23 @@
+<div class="container">
+
+  <h1>All Posts</h1>
+  
+  <div class="content">
+
+    <div class="postlist">
+      <ul>
+        <li>
+          <% @posts.each do |post| %>
+            <a href="posts/<%= post.id %>"><%= post.title %></a><br>
+          <% end %>
+        </li>
+      </ul>   
+
+      <form action="/posts/new" method="get" name="logout">
+        Create a New Post<br>
+        <input type="submit" value="Create">
+      </form> 
+    </div>
+  </div>
+
+</div>
