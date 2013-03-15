@@ -1,0 +1,41 @@
+.container {
+    margin: 20px auto;
+    width: 600px;
+    padding: 0px 20px 20px 20px;
+    border: 1px dotted black;
+  }
+
+th {
+    text-align: left;
+  }
+
+
+body {
+  font-family: helvetica;
+}
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+th {
+  text-align: left;
+}
+
+.left {
+    width: 30%;
+    float: left;
+    text-align: right;
+    border: 1px solid #ccc;
+}
+.right {
+    width: 65%;
+    margin-left: 10px;
+    text-align: right;
+    border: 1px solid #ccc;
+}
+
+.success {
+  vertical-align: middle;
+}
