@@ -12,11 +12,11 @@
 
     <div class="postlist">
       <ul>
-        <li>
+       
           <% @posts.each do |post| %>
-            <a href="posts/<%= post.id %>"><%= post.title %></a><br>
+             <li><a href="posts/<%= post.id %>"><%= post.title %></a></li>
           <% end %>
-        </li>
+        
       </ul>   
 
       

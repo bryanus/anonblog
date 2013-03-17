@@ -212,3 +212,21 @@ blockquote {
   background-color:#828282;
   color: #fff;
 }
+
+/*delete button*/
+
+
+.hide-button {
+    float: right;
+    margin-top: -13px;
+    font-size: 11px;
+    font-family: helvetica;
+    color: tray;
+    /*display: none;*/
+    background: url('/images/delete.png') no-repeat;
+}
+
+.content li:hover .hide-button {
+    display: block;
+    background: url('/images/delete.png') no-repeat;
+}

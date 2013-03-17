@@ -23,3 +23,21 @@ get '/' do
   @posts = Post.all
   erb :posts
 end  
+
+#delete the post
+
+delete "/posts/:id" do
+  @post = Post.delete(params[:id])
+  redirect "/"
+end
+
+#edit the post
+
+put "/posts/:id" do
+  @post = Post.find(params[:id])
+  if @post.update_attributes(params[:post])
+    redirect "/posts/#{@post.id}"
+  else
+    erb :edit
+  end
+end

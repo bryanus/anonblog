@@ -2,7 +2,12 @@
   <h1>&ldquo;<%= @post.title %>&rdquo;</h1>
   
   <a href="/" class="newpost">Back to All Posts</a>
-  
+
+  <form action="/posts/<%= @post.id %>" method="delete">
+    <input type="hidden" name="_method" value="delete" /> 
+    <input type="submit" value="Delete Post" />
+  </form>
+
   <div class="content">
     <p><%= @post.body %></p>
   </div>
