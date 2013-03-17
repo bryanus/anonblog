@@ -3,13 +3,23 @@
   
   <a href="/" class="newpost">Back to All Posts</a>
 
-  <form action="/posts/<%= @post.id %>" method="delete">
+  <form action="/posts/<%= @post.id %>" method="post">
     <input type="hidden" name="_method" value="delete" /> 
     <input type="submit" value="Delete Post" />
   </form>
 
+  <a href="/posts/<%= @post.id %>/edit">Edit Post</a>
+
+
   <div class="content">
     <p><%= @post.body %></p>
+     <ul>
+      <% @post.tags.each do |tag| %>
+        <li><%= tag.name %></li>
+      <% end %>
+     </ul>   
+
+
   </div>
 
   
