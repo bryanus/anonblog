@@ -1,43 +1,28 @@
- <div class="container">
+<div class="container">
   <h1>&ldquo;<%= @post.title %>&rdquo;</h1>
   
-  <a href="/" class="newpost">Back to All Posts</a>
-
-  <form action="/posts/<%= @post.id %>" method="post">
-    <input type="hidden" name="_method" value="delete" /> 
-    <input type="submit" value="Delete Post" />
-  </form>
-
-  <a href="/posts/<%= @post.id %>/edit">Edit Post</a>
-
+  
 
   <div class="content">
     <p><%= @post.body %></p>
-     <ul>
-      <% @post.tags.each do |tag| %>
-        <li><%= tag.name %></li>
-      <% end %>
-     </ul>   
+     
+     <div class="tag_listing">
+        <ul>
+        <% @post.tags.each do |tag| %>
+          <li><a href="/posts/tag/<%= tag.name %>"><%= tag.name %></a></li>
+        <% end %>
+       </ul>
+     </div>   
 
+    <div class="bottom_links">
+      <a href="/" class="newpost">Back to All Posts</a>
 
+      <form action="/posts/<%= @post.id %>" method="post">
+        <input type="hidden" name="_method" value="delete" /> 
+        <input type="submit" class="newpost" value="Delete Post" />
+      </form>
+
+      <a href="/posts/<%= @post.id %>/edit" class="newpost">Edit Post</a>
+    </div>
   </div>
-
-  
-
-  <!-- <div class="pagination">
-    <a href="page1.html" class="disabled">&lt;&lt; Previous</a>
-    <ol>
-      <li><a href="page1.html" class="active">1</a></li>
-      <li><a href="page2.html">2</a></li>
-      <li><a href="page3.html">3</a></li>
-      <li><a href="page4.html">4</a></li>
-      <li><a href="page5.html">5</a></li>
-    </ol>
-    <a href="page2.html">Next &gt;&gt;</a>
-  </div> -->
-
-  <div class="footer">
-    Copyright &copy; 2013 Bob Loblaw
-  </div>
-
-</div>
+ 

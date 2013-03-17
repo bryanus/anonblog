@@ -1,0 +1,27 @@
+ <div class="container">
+  <h1>All posts matching &ldquo;<%= @tag.name %>&rdquo;</h1>
+
+	<div class="content">
+		<div class="postlist">
+		  <ul>
+			  <% @posts.each do |post| %>
+			    <li><a href="/posts/<%= post.id %>"><%= post.title %></a></li>
+			  <% end %>
+			</ul>
+		</div>
+	</div>	
+
+	<div class="bottom_links">
+    <a href="/" class="newpost">Back to All Posts</a>
+  </div>
+
+
+  
+
+
+
+  <div class="footer">
+    Copyright &copy; 2013 Bob Loblaw
+  </div>
+
+</div>

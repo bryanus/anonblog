@@ -1,13 +1,23 @@
-<form action="/posts/<%= @post.id %>" method="post">
-  <input type="hidden" name="_method" value="put" /> 
+<div class="container">
+  <h1>Now editing &ldquo;<%= @post.title %>&rdquo;</h1>
+  
+  
 
-  <label for="post_title">Title:</label><br />
-  <input id="post_title" name="post[title]" type="text" value="<%= @post.title %>" />
-  <br />
+  <div class="content">
 
-  <label for="post_body">Body:</label><br />
-  <textarea id="post_body" name="post[body]" rows="5" ><%= @post.body %></textarea>
-  <br />
+  	<form action="/posts/<%= @post.id %>" method="post">
+		  <input type="hidden" name="_method" value="put" /> 
 
-  <input type="submit" value="Edit Post" />
-</form>   
+		  <label for="post_title">Title:</label><br />
+		  <input id="post_title" name="post[title]" type="text" value="<%= @post.title %>" />
+		  <br />
+
+		  <label for="post_body">Body:</label><br />
+		  <textarea id="post_body" name="post[body]" rows="5" ><%= @post.body %></textarea>
+		  <br />
+		  <label for="post_tags">Add Tags:</label>
+		  <input type="text" name="tags" ><br>
+
+		  <input type="submit" class="newpost" value="Edit Post" />
+		  <a href="/" class="newpost">Cancel</a>
+		</form>   

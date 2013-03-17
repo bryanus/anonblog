@@ -15,8 +15,11 @@ th {
   }
 
 .content {
-  border-bottom: 12px solid rgb(224, 224, 224);
+  
   padding-bottom: 15px;
+  padding-top: 15px;
+  clear: both;
+  display: block;
 }
 
 .content ul {
@@ -191,6 +194,8 @@ blockquote {
   font-size: 12px;
   clear: both;
   padding-top: 12px;
+  margin-top: 40px;
+  border-top: 12px solid rgb(224, 224, 224);
 }
 
 
@@ -206,6 +211,8 @@ blockquote {
   font-weight:bold;
   padding:6px 24px;
   text-decoration:none;
+  float: left;
+  margin-right: 10px;
 }
 
 .newpost:hover {
@@ -229,4 +236,46 @@ blockquote {
 .content li:hover .hide-button {
     display: block;
     background: url('/images/delete.png') no-repeat;
+}
+
+/*tags*/
+
+.tag_listing li {
+  background: url(../images/tag_icon.png) no-repeat;
+  background-position: -10px center;
+  padding-left: 39px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  font-size: 14px;
+  color: #777;
+  width: auto;
+
+}
+
+.tag_listing ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/*.tag_listing:hover {
+  background-color:#828282;
+  color: #fff;
+ } */
+
+
+
+.tag_listing li a{
+  text-decoration: none;
+}
+
+.tag_listing li a:hover{
+  background: #cfcfcf;
+}
+
+.tag_listing li a:link{
+  color: rgb(0, 133, 255)
+}
+
+.tag_listing li a:visited{
+  color: #999;
 }
