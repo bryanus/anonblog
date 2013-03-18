@@ -6,17 +6,17 @@ end
 #on submit, we create the new Post object and save it to the db
 post "/posts" do
   
-  if @post = Post.create(params[:post])
-    string = params[:tags] #  "apple, banana"
+  if @post = Post.create(params[:post]) #if post was created successfully
+    string = params[:tags] # "apple, banana"
     array = string.gsub(" ", "").split(',') #["apple", "banana"]
     array.each do |name|
-      #conditional to check if exists or not
-      tag = Tag.where(name:name).first
+      #conditional to check if tag exists or not
+      tag = Tag.where(:name => name).first
       if tag #exists, update the poststags table with the ids
-        Poststag.create(post_id:@post.id, tag_id:tag.id)
+        Poststag.create(:post_id => @post.id, :tag_id => tag.id)
       else #tag is nil; create it first
-        tag = Tag.create(name:name)
-        Poststag.create(post_id:@post.id, tag_id:tag.id)
+        tag = Tag.create(:name => name)
+        Poststag.create(:post_id => @post.id, :tag_id => tag.id)
       end
     end
     redirect "posts/#{@post.id}" #if successful, redirect to post view page
@@ -24,9 +24,6 @@ post "/posts" do
     erb :new
   end
 end
-
-
-#<Poststag id: 1, post_id: 5, tag_id: 1>
 
 
 
@@ -66,13 +63,13 @@ put "/posts/:id" do
     string = params[:tags] #  "apple, banana"
     array = string.gsub(" ", "").split(',') #["apple", "banana"]
     array.each do |name|
-      #conditional to check if exists or not
-      tag = Tag.where(name:name).first
+      #conditional to check if tag exists or not
+      tag = Tag.where(:name => name).first
       if tag #exists, update the poststags table with the ids
-        Poststag.create(post_id:@post.id, tag_id:tag.id)
+        Poststag.create(:post_id => @post.id, :tag_id => tag.id)
       else #tag is nil; create it first
-        tag = Tag.create(name:name)
-        Poststag.create(post_id:@post.id, tag_id:tag.id)
+        tag = Tag.create(:name => name)
+        Poststag.create(:post_id => @post.id, :tag_id => tag.id)
       end
     end
     
@@ -81,18 +78,4 @@ put "/posts/:id" do
   
     erb :edit
   end
-end
-
-#get all posts with a tag
-
-get '/posts/tag/:name' do
-  # tag_id = Tag.find_by_name(params[:name])
-  # @post_ids = Poststag.where(:tag_id => tag_id)
-  # puts @post_ids
-
-  @tag = Tag.find_by_name(params[:name])
-  @posts = @tag.posts #returns all post objects that match the tag id passed
-  puts @posts
-
-  erb :tag_posts
-end  
+end 

@@ -9,7 +9,7 @@
      <div class="tag_listing">
         <ul>
         <% @post.tags.each do |tag| %>
-          <li><a href="/posts/tag/<%= tag.name %>"><%= tag.name %></a></li>
+          <li><a href="/tag/<%= tag.id %>"><%= tag.name %></a></li>
         <% end %>
        </ul>
      </div>   

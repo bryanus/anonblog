@@ -1,8 +1,9 @@
-#index - this shows all l tags
-
 #show - this shows the posts associated with a given tag
 
-get "/tags/:id" do
+get "/tag/:id" do
 	@tag = Tag.find(params[:id])
+	puts @tag
 	@posts = @tag.posts
+
+	erb :tag_posts
 end
