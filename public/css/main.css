@@ -46,18 +46,7 @@ th {
   color: #999;
 }
 
-.left {
-    /*width: 30%;*/
-    float: left;
-    text-align: right;
-    /*border: 1px solid #ccc;*/
-}
-.right {
-    /*width: 65%;*/
-    margin-left: 10px;
-    text-align: right;
-    /*border: 1px solid #ccc;*/
-}
+
 
 .success {
   vertical-align: middle;
@@ -124,6 +113,20 @@ small.page_no {
   padding-left: 10px;*/
 }
 
+input {
+  width: 710px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+}
+
+textarea {
+  width: 710px;
+  height: 300px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 0px;
+}
 /*overrides*/
 
 
@@ -211,8 +214,8 @@ blockquote {
   font-weight:bold;
   padding:6px 24px;
   text-decoration:none;
-  float: left;
   margin-right: 10px;
+  width: auto;
 }
 
 .newpost:hover {

@@ -1,13 +1,15 @@
 <div class="container">
   <h1>Create a Post</h1>
-  <p>POST</p>
+  
 
   <form action="/posts" method="post">
-    <div class="left">Title: </div>
-    <div class="right"><input type="text" name="post[title]"></div><br>
-    <div class="left">Text: </div>
-    <div class="right"><textarea rows="8" cols="40" name="post[body]"></textarea></div><br>
-    <div class="right"><input type="text" name="tags"></div><br>
-    <div class="right"><input type="submit" value="Submit"></div><br><br>
+    Title: 
+    <input type="text" name="post[title]"><br>
+    Text: 
+    <textarea rows="8" cols="40" name="post[body]"></textarea><br>
+    Tags:
+    <input type="text" name="tags"><br>
+    <input type="submit" class="newpost" value="Create">
+    <a href="/" class="newpost">Cancel</a>
   </form>  
-</div>
+
